@@ -1,0 +1,48 @@
+// mixins
+
+@mixin flex {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Noto Sans", sans-serif;
+}
+
+main {
+  background-color: #1c1c1c;
+  color: #c4c4c4;
+  nav {
+    @include flex();
+    height: 10vh;
+    width: 90vw;
+    margin: auto;
+    .logo {
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2vw;
+      flex: 2;
+    }
+    .nav-links {
+      @include flex();
+      flex: 1;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      list-style: none;
+    }
+  }
+}
+
+section {
+  height: 200vh;
+  background: url("../assets/background.jpg");
+  object-fit: contain;
+}
