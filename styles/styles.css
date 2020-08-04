@@ -57,11 +57,13 @@ main nav .nav-links {
 }
 
 .landing {
+  background-color: rgba(0, 0, 0, 0.6);
+  background-blend-mode: multiply;
   position: relative;
   height: 190vh;
+  padding-left: 10vh;
   background-image: url("../assets/background.jpg");
-  -o-object-fit: scale-down;
-     object-fit: scale-down;
+  background-size: cover;
   text-transform: uppercase;
   display: -ms-grid;
   display: grid;
@@ -147,5 +149,37 @@ footer .social {
       -ms-flex: 1;
           flex: 1;
   list-style-type: none;
+}
+
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 40%;
+  }
+  .landing {
+    padding: 0;
+    margin-left: -25vw;
+  }
+  .landing .header1,
+  .landing .header2 {
+    -webkit-transform: translate(25vw, 0);
+            transform: translate(25vw, 0);
+  }
+  .landing .arrow-down {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .landing {
+    padding: 0;
+    margin-left: -180vw;
+  }
+  .landing .header1,
+  .landing .header2 {
+    -webkit-transform: translate(160vw, 0);
+            transform: translate(160vw, 0);
+    font-size: 2rem;
+    margin-top: -15vh;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

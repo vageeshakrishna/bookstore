@@ -8,8 +8,6 @@
 
 // imports
 
-@import "responsive";
-
 * {
   margin: 0;
   padding: 0;
@@ -47,10 +45,13 @@ main {
 }
 
 .landing {
+  background-color: rgba($color: #000000, $alpha: 0.6);
+  background-blend-mode: multiply;
   position: relative;
   height: 190vh;
+  padding-left: 10vh;
   background-image: url("../assets/background.jpg");
-  object-fit: scale-down;
+  background-size: cover;
   text-transform: uppercase;
   display: grid;
   grid-template-columns: 10% 2fr 1fr 10%;
@@ -98,5 +99,35 @@ footer {
     font-size: 2rem;
     flex: 1;
     list-style-type: none;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 40%;
+  }
+  .landing {
+    padding: 0;
+    margin-left: -25vw;
+    .header1,
+    .header2 {
+      transform: translate(25vw, 0);
+    }
+    .arrow-down {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .landing {
+    padding: 0;
+    margin-left: -180vw;
+    .header1,
+    .header2 {
+      transform: translate(160vw, 0);
+      font-size: 2rem;
+      margin-top: -15vh;
+    }
   }
 }
