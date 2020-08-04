@@ -8,6 +8,7 @@
 html {
   font-size: 62.5%;
   font-family: "Noto Sans", sans-serif;
+  scroll-behavior: smooth;
 }
 
 main {
@@ -25,7 +26,7 @@ main nav {
       -ms-flex-align: center;
           align-items: center;
   height: 10vh;
-  width: 90vw;
+  width: 80%;
   margin: auto;
 }
 
@@ -55,10 +56,57 @@ main nav .nav-links {
   list-style: none;
 }
 
-section {
+.landing {
+  position: relative;
   height: 200vh;
-  background: url("../assets/background.jpg");
-  -o-object-fit: contain;
-     object-fit: contain;
+  background-image: url("../assets/background.jpg");
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+  text-transform: uppercase;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 10% 2fr 1fr 10%;
+      grid-template-columns: 10% 2fr 1fr 10%;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.landing p {
+  margin-top: 5vh;
+  font-size: 3rem;
+  text-transform: none;
+}
+
+.landing .header1 {
+  font-size: 5rem;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  padding: 5vh;
+}
+
+.landing .header1 .arrow-down {
+  color: #1c1c1c;
+  position: absolute;
+  right: 10vw;
+  top: 70vh;
+  font-size: 4.5rem;
+}
+
+.landing .header2 {
+  font-size: 5rem;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5vh;
 }
 /*# sourceMappingURL=styles.css.map */
